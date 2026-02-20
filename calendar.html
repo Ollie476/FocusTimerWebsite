@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Calendar</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="calendar.js" defer></script>
+    </head>
+    <body>
+        <button class="change-page-btn" onclick="document.location.href='index.html'"></button>
+
+        <div id="month-selector">
+            <button onclick="shiftMonth(false)"><</button>
+            <p id="month-text">February</p>
+            <button onclick="shiftMonth(true)">></button>
+        </div>
+        
+        <section id="calendar-cells"></section>
+        <h1 id="focus-time-text"></h1>
+        <section id="task-history"></section>
+    </body>
+</html>

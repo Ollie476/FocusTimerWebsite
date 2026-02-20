@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" href="style.css">
+        <script src="index.js" defer></script>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <button class="change-page-btn" onclick="document.location.href='calendar.html'"></button>
+        <section id="timer-section">
+            <div>
+                <p id="timer-text">00:00</p>
+                <input type="range" min="1" max="180" value="60" id="timer-slider" step="1" onchange="updateTimer(this)">
+            </div>
+            <input type="text" placeholder="Note..." id="task-input" maxlength="24">
+        </section>
+        <button id="start-btn" onclick="toggleTimer()">start</button>
+
+        <section id="task-history"></section>
+    </body>
+</html>
