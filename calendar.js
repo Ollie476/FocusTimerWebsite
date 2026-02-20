@@ -55,7 +55,7 @@ function updateMonth() {
             const day = splitDate[0];
             console.log(day);
 
-            if (day == i) {
+            if (day === i) {
                 isBlank = false;
                 break;
             }
