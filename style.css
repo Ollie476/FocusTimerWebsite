@@ -217,14 +217,18 @@ body {
 }
 
 .change-page-btn {
+  display: flex;
+  justify-content: center;
+  align-items: center;
   transition: transform 0.35s ease-in-out;
   position: fixed;
   top: 1.5rem;
   right: 1.5rem;
-  width: 40px;
-  height: 40px;
+  width: 60px;
+  height: 60px;
   border-radius: 50%;
   border: none;
+  justify-content: center;
   background-color: #f14747;
   cursor: pointer;
 }
@@ -234,4 +238,9 @@ body {
 
 .blank-day {
   background-color: #444 !important;
+}
+
+.btn-icon {
+  width: 40px;
+  height: 40px;
 }/*# sourceMappingURL=style.css.map */

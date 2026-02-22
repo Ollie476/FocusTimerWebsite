@@ -47,6 +47,7 @@ function timerTick() {
         clearInterval(timerInstance);
         timerInstance = null;
         startBtn.innerText = "claim";
+        document.title = "claim..."
     }
 }
 
@@ -57,6 +58,7 @@ function toggleTimer() {
         startBtn.innerText = "start";
         timerSlider.disabled = false;
         taskInput.disabled = false;
+        document.title = timerText.innerText;
         addTaskToCompleted();
         return;
     }
