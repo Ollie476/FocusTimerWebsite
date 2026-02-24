@@ -114,10 +114,20 @@ function updateTasks() {
     for (let i = tasks.length-1; i >= 0; i--) {
         const task = tasks[i];
         taskHistory.innerHTML += `
-        <div class="complete-task">
+        <div class="complete-task" id="task-${i}">
             <p>${task[0]}</p>
             <p>${task[1]}</p>
             <p>${task[2]}</p>
+            <button class="delete-task-btn" onclick="deleteTask(this.parentElement)">X</button>
         </div>`;
     }
+}
+
+function deleteTask(taskElement) {
+    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    let index = taskElement.id.split("-")[1];
+
+    tasks.splice(index, 1);
+    localStorage.setItem("tasks", JSON.stringify(tasks))
+    updateTasks();
 }

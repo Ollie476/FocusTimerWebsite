@@ -138,9 +138,10 @@ body {
 .complete-task {
     display: flex;
     align-items: center;
-    justify-content: space-evenly;
+    justify-content: space-between;
+    padding: 0 48px;
 
-    width: 500px;
+    width: 402px;
     height: 60px;
 
     background-color: rgb(237, 237, 237);
@@ -244,15 +245,11 @@ body {
     }
 }
 
-.change-page-btn {
+.redirect-btn {
     display: flex;
     justify-content: center;
     align-items: center;
     transition: transform 0.35s ease-in-out;
-    position: fixed;
-
-    top: 1.5rem;
-    right: 1.5rem;
 
     width: 60px;
     height: 60px;
@@ -265,6 +262,31 @@ body {
 
     &:hover {
         transform: scale(1.2);
+    }
+}
+
+.redirect-btn-section {
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    top: 1.5rem;
+    right: 1.5rem;
+    gap: 1rem;
+}
+
+.delete-task-btn {
+    transition: background-color 0.35s ease-in-out, opacity 0.35s ease-in-out, transform 0.35s ease-in-out;
+    width: 32px;
+    height: 32px;
+    position: relative;
+    border-radius: 50%;
+    border: none;
+    opacity: 0.15;
+
+    &:hover {
+        transform: scale(1.1);
+        background-color: #f14747;
+        opacity: 1;
     }
 }
 

@@ -6,16 +6,18 @@
         <script src="calendar.js" defer></script>
     </head>
     <body>
-        <button class="change-page-btn" onclick="document.location.href='index.html'">
-            <img class="btn-icon" src="assets/home.png">
-        </button>
+        <section class="redirect-btn-section">
+            <button class="redirect-btn" onclick="document.location.href='index.html'">
+                <img class="btn-icon" src="assets/home.png"> <!-- Source: "https://www.flaticon.com/free-icons/home" Home icons created by Aswell Studio - Flaticon-->
+            </button>
+        </section>
 
         <div id="month-selector">
             <button onclick="shiftMonth(false)"><</button>
             <p id="month-text">February</p>
             <button onclick="shiftMonth(true)">></button>
         </div>
-        
+
         <section id="calendar-cells"></section>
         <h1 id="focus-time-text"></h1>
         <section id="task-history"></section>
