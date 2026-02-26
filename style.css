@@ -251,6 +251,7 @@ body {
   border-radius: 50%;
   border: none;
   opacity: 0.15;
+  cursor: pointer;
 }
 .delete-task-btn:hover {
   transform: scale(1.1);

@@ -83,13 +83,13 @@ function toggleTimer() {
 }
 
 function addTaskToCompleted() {
-    let taskValue = taskInput.value.trim();
+    const taskValue = taskInput.value.trim();
 
     if (taskValue.length === 0) {
         taskValue = "(no note)";
     }
 
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
     let focusedTime = parseInt(setSeconds / 60);
 
     if (focusedTime === 1)
@@ -124,8 +124,8 @@ function updateTasks() {
 }
 
 function deleteTask(taskElement) {
-    let tasks = JSON.parse(localStorage.getItem("tasks")) || [];
-    let index = taskElement.id.split("-")[1];
+    const tasks = JSON.parse(localStorage.getItem("tasks")) || [];
+    const index = taskElement.id.split("-")[1];
 
     tasks.splice(index, 1);
     localStorage.setItem("tasks", JSON.stringify(tasks))
