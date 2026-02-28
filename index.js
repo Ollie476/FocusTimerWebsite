@@ -16,12 +16,15 @@ document.addEventListener("DOMContentLoaded", (event) => {
     taskHistory = document.getElementById("task-history");
     timerSlider = document.getElementById("timer-slider");
 
+    startBtn.onclick = toggleTimer;
+    timerSlider.onchange = updateTimer;
+
     updateTimer(timerSlider);
     updateTasks();
 });
 
-function updateTimer(slider) {
-    setSeconds = slider.value * 60;
+function updateTimer() {
+    setSeconds = timerSlider.value * 60;
     const formattedSeconds = formatSeconds(setSeconds);
 
     timerText.innerText = formattedSeconds;

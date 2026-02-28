@@ -13,23 +13,37 @@ document.addEventListener("DOMContentLoaded", (event) => {
     monthText = document.getElementById("month-text");
     focusTimeText = document.getElementById("focus-time-text");
     taskHistory = document.getElementById("task-history");
+    monthSelector = document.getElementById("month-selector");
+
+    console.log(monthSelector.children);
+    monthSelector.querySelectorAll("button").forEach(button => {
+        if (button.title === "next month") {
+            button.onclick = displayNextMonth;
+        }
+        else if (button.title === "prev month") {
+            button.onclick = displayPrevMonth;
+        }
+    });
+
     updateMonth();
 });
 
-function shiftMonth(shiftForward) {
-    if (shiftForward) {
-        currentMonthIdx += 1;
-        if (currentMonthIdx > 11) {
-            currentMonthIdx -= 12;
-            currentYear += 1;
-        }
+
+function displayNextMonth() {
+    currentMonthIdx += 1;
+    if (currentMonthIdx > 11) {
+        currentMonthIdx -= 12;
+        currentYear += 1;
     }
-    else {
-        currentMonthIdx -= 1;
-        if (currentMonthIdx < 0) {
-            currentMonthIdx += 12;
-            currentYear -= 1;
-        }
+
+    updateMonth();
+}
+
+function displayPrevMonth() {
+    currentMonthIdx -= 1;
+    if (currentMonthIdx < 0) {
+        currentMonthIdx += 12;
+        currentYear -= 1;
     }
 
     updateMonth();

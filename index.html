@@ -2,25 +2,28 @@
 <html lang="en">
     <head>
         <link rel="stylesheet" href="style.css">
-        <script src="index.js" defer></script>
+        <script src="index.js"></script>
+        <title>00:00</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
     </head>
     <body>
         <section class="redirect-btn-section">
-            <button class="redirect-btn" onclick="document.location.href='calendar.html'">
-                <img class="btn-icon" src="assets/calendar.png"> <!-- Image Source: https://www.flaticon.com/free-icons/calendar" Calendar icons created by Hilmy Abiyyu A. - Flaticon-->
-            </button>
+            <a class="redirect-btn" href='calendar.html'>
+                <img class="btn-icon" title="Go to calendar" src="assets/calendar.svg" alt="calendar">
+            </a>
         </section>
         <section id="timer-section">
             <div>
                 <p id="timer-text">00:00</p>
-                <input type="range" min="1" max="180" value="60" id="timer-slider" step="1" onchange="updateTimer(this)">
+                <input type="range" min="1" max="180" value="60" id="timer-slider" step="1">
             </div>
             <input type="text" placeholder="Note..." id="task-input" maxlength="24">
         </section>
-        <button id="start-btn" onclick="toggleTimer()">start</button>
+        <button id="start-btn">start</button>
 
         <section id="task-history"></section>
     </body>
 </html>
 
+
+<!-- research all parts of html and get that to a much better point-->

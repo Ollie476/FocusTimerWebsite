@@ -3,23 +3,23 @@
     <head>
         <title>Calendar</title>
         <link rel="stylesheet" href="style.css">
-        <script src="calendar.js" defer></script>
+        <script src="calendar.js"></script>
     </head>
     <body>
         <section class="redirect-btn-section">
-            <button class="redirect-btn" onclick="document.location.href='index.html'">
-                <img class="btn-icon" src="assets/home.png"> <!-- Source: "https://www.flaticon.com/free-icons/home" Home icons created by Aswell Studio - Flaticon-->
-            </button>
+            <a class="redirect-btn" href='index.html'>
+                <img class="btn-icon" title="Go to timer" src="assets/clock.svg" alt="timer">
+            </a>
         </section>
 
         <div id="month-selector">
-            <button onclick="shiftMonth(false)"><</button>
+            <button title="prev month"><</button>
             <p id="month-text">February</p>
-            <button onclick="shiftMonth(true)">></button>
+            <button title="next month">></button>
         </div>
 
         <section id="calendar-cells"></section>
-        <h1 id="focus-time-text"></h1>
+        <p id="focus-time-text"></p>
         <section id="task-history"></section>
     </body>
 </html>
